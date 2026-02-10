@@ -11,6 +11,6 @@ if __name__ == "__main__":
     APP_SECRET = os.environ['SOCRATA_APP_SECRET']
 
     client = Socrata("data.seattle.gov", APP_TOKEN)
-    result = client.get("kzjm-xkqj")
+    result = client.get("kzjm-xkqj", limit=1)
 
     print(result)

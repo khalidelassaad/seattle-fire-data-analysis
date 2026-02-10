@@ -2,3 +2,4 @@
 .env
 .vscode
 pyrightconfig.json
+.ipynb_checkpoints
