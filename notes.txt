@@ -1,3 +1,9 @@
 Dataset: https://data.seattle.gov/Public-Safety/Seattle-Real-Time-Fire-911-Calls/kzjm-xkqj/about_data
 
 API Endpoint: https://data.seattle.gov/api/v3/views/kzjm-xkqj/query.json
+
+Interesting data in these sites!
+https://web.seattle.gov/sfd/realtime911/getRecsForDatePub.asp?action=Today&incDate=&rad1=des
+https://web.seattle.gov/sfd/realtime911/
+https://web.seattle.gov/sfd/IncidentSearch/incidentSearchResults.asp
+https://web.seattle.gov/sfd/IncidentSearch/incidentDetail.asp?ID=F260000001
