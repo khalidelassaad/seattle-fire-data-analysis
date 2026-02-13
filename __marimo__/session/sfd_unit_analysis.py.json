@@ -1,0 +1,92 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.19.11"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "f1ab4803c60ee908f8c0e3366c54bf87",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "iFGD",
+      "code_hash": "992a3662ef50514523403012ec8332d4",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "jtOc",
+      "code_hash": "0c615c0a3ec74a3ae622e97e020786e8",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vOGa",
+      "code_hash": "8b1dc9315c684a0c3e13e174e9690a0c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Choose a unit: <marimo-ui-element object-id='jtOc-0' random-id='dcabe452-d158-62df-c818-560e1445508e'><marimo-dropdown data-initial-value='[]' data-label='null' data-options='[&quot;A10&quot;,&quot;A14&quot;,&quot;A17&quot;,&quot;A2&quot;,&quot;A22&quot;,&quot;A25&quot;,&quot;A26&quot;,&quot;A31&quot;,&quot;A4&quot;,&quot;A5&quot;,&quot;A7&quot;,&quot;AIR1&quot;,&quot;AIR10&quot;,&quot;AIR26&quot;,&quot;B2&quot;,&quot;B4&quot;,&quot;B5&quot;,&quot;B6&quot;,&quot;B7&quot;,&quot;B77&quot;,&quot;CHAP5&quot;,&quot;CHAP6&quot;,&quot;CHAP7&quot;,&quot;DECON1&quot;,&quot;DEP1&quot;,&quot;E10&quot;,&quot;E11&quot;,&quot;E13&quot;,&quot;E16&quot;,&quot;E17&quot;,&quot;E18&quot;,&quot;E2&quot;,&quot;E20&quot;,&quot;E21&quot;,&quot;E22&quot;,&quot;E24&quot;,&quot;E25&quot;,&quot;E26&quot;,&quot;E27&quot;,&quot;E28&quot;,&quot;E29&quot;,&quot;E30&quot;,&quot;E31&quot;,&quot;E32&quot;,&quot;E33&quot;,&quot;E34&quot;,&quot;E35&quot;,&quot;E36&quot;,&quot;E37&quot;,&quot;E38&quot;,&quot;E39&quot;,&quot;E40&quot;,&quot;E41&quot;,&quot;E5&quot;,&quot;E6&quot;,&quot;E8&quot;,&quot;E9&quot;,&quot;E90&quot;,&quot;E95&quot;,&quot;EVENT1&quot;,&quot;EVENT10&quot;,&quot;EVENT11&quot;,&quot;EVENT12&quot;,&quot;EVENT13&quot;,&quot;EVENT14&quot;,&quot;EVENT15&quot;,&quot;EVENT2&quot;,&quot;EVENT3&quot;,&quot;EVENT4&quot;,&quot;EVENT5&quot;,&quot;EVENT6&quot;,&quot;FAC&quot;,&quot;FAC1&quot;,&quot;FB1&quot;,&quot;FB3&quot;,&quot;FB4&quot;,&quot;FIREBOAT&quot;,&quot;H1&quot;,&quot;H11&quot;,&quot;H2&quot;,&quot;H98&quot;,&quot;H99&quot;,&quot;HAZ1&quot;,&quot;HAZ80&quot;,&quot;HUSKY-EMS&quot;,&quot;L1&quot;,&quot;L10&quot;,&quot;L11&quot;,&quot;L12&quot;,&quot;L13&quot;,&quot;L3&quot;,&quot;L4&quot;,&quot;L5&quot;,&quot;L6&quot;,&quot;L8&quot;,&quot;L9&quot;,&quot;LUMEN-CMD&quot;,&quot;LUMEN-EMS&quot;,&quot;LUMEN-HAZ&quot;,&quot;M1&quot;,&quot;M10&quot;,&quot;M17&quot;,&quot;M18&quot;,&quot;M26&quot;,&quot;M28&quot;,&quot;M31&quot;,&quot;M32&quot;,&quot;M44&quot;,&quot;MAR5&quot;,&quot;MIH&quot;,&quot;MRN1&quot;,&quot;MVU1&quot;,&quot;NOR-M163&quot;,&quot;PIO&quot;,&quot;PIO2&quot;,&quot;PLEDG-EMS&quot;,&quot;PTRL4&quot;,&quot;R1&quot;,&quot;RB5&quot;,&quot;REHAB1&quot;,&quot;SAFT2&quot;,&quot;SQ14&quot;,&quot;STAF10&quot;,&quot;TMOB-EMS&quot;,&quot;WAMU-EMS&quot;]' data-allow-select-none='true' data-searchable='false' data-full-width='false'></marimo-dropdown></marimo-ui-element></span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MivS",
+      "code_hash": "c59ed0df6a5bb8df019458458483148a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>&#x27;L4&#x27;</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "zPPO",
+      "code_hash": "172a1407b771cfc40161af39ccf48787",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='zPPO-0' random-id='6f54aad4-2550-f642-768b-2812bdac9757'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;address&#92;&quot;:&#92;&quot;140 4th Ave N&#92;&quot;,&#92;&quot;type&#92;&quot;:&#92;&quot;EVENT - Special Event&#92;&quot;,&#92;&quot;datetime&#92;&quot;:&#92;&quot;2026-02-11T13:03:00.000&#92;&quot;,&#92;&quot;latitude&#92;&quot;:47.619041,&#92;&quot;longitude&#92;&quot;:-122.348899,&#92;&quot;report_location&#92;&quot;:&#92;&quot;{&#x27;type&#x27;: &#x27;Point&#x27;, &#x27;coordinates&#x27;: [-122.348899, 47.619041]}&#92;&quot;,&#92;&quot;incident_number&#92;&quot;:&#92;&quot;F260019911&#92;&quot;},{&#92;&quot;address&#92;&quot;:&#92;&quot;NB I5 AT ALBRO&#92;&quot;,&#92;&quot;type&#92;&quot;:&#92;&quot;Aid Response Freeway&#92;&quot;,&#92;&quot;datetime&#92;&quot;:&#92;&quot;2026-02-11T12:53:00.000&#92;&quot;,&#92;&quot;latitude&#92;&quot;:47.542027,&#92;&quot;longitude&#92;&quot;:-122.303649,&#92;&quot;report_location&#92;&quot;:&#92;&quot;{&#x27;type&#x27;: &#x27;Point&#x27;, &#x27;coordinates&#x27;: [-122.303649, 47.542027]}&#92;&quot;,&#92;&quot;incident_number&#92;&quot;:&#92;&quot;F260019908&#92;&quot;},{&#92;&quot;address&#92;&quot;:&#92;&quot;3440 East Marginal Way S&#92;&quot;,&#92;&quot;type&#92;&quot;:&#92;&quot;Aid Response&#92;&quot;,&#92;&quot;datetime&#92;&quot;:&#92;&quot;2026-02-11T12:49:00.000&#92;&quot;,&#92;&quot;latitude&#92;&quot;:47.573305,&#92;&quot;longitude&#92;&quot;:-122.339696,&#92;&quot;report_location&#92;&quot;:&#92;&quot;{&#x27;type&#x27;: &#x27;Point&#x27;, &#x27;coordinates&#x27;: [-122.339696, 47.573305]}&#92;&quot;,&#92;&quot;incident_number&#92;&quot;:&#92;&quot;F260019906&#92;&quot;},{&#92;&quot;address&#92;&quot;:&#92;&quot;4th Ave / Pine St&#92;&quot;,&#92;&quot;type&#92;&quot;:&#92;&quot;EVENT - Special Event&#92;&quot;,&#92;&quot;datetime&#92;&quot;:&#92;&quot;2026-02-11T12:47:00.000&#92;&quot;,&#92;&quot;latitude&#92;&quot;:47.611207,&#92;&quot;longitude&#92;&quot;:-122.337592,&#92;&quot;report_location&#92;&quot;:&#92;&quot;{&#x27;type&#x27;: &#x27;Point&#x27;, &#x27;coordinates&#x27;: [-122.337592, 47.611207]}&#92;&quot;,&#92;&quot;incident_number&#92;&quot;:&#92;&quot;F260019905&#92;&quot;},{&#92;&quot;address&#92;&quot;:&#92;&quot;13000 Linden Ave N&#92;&quot;,&#92;&quot;type&#92;&quot;:&#92;&quot;Low Acuity Response&#92;&quot;,&#92;&quot;datetime&#92;&quot;:&#92;&quot;2026-02-11T12:42:00.000&#92;&quot;,&#92;&quot;latitude&#92;&quot;:47.723218,&#92;&quot;longitude&#92;&quot;:-122.348195,&#92;&quot;report_location&#92;&quot;:&#92;&quot;{&#x27;type&#x27;: &#x27;Point&#x27;, &#x27;coordinates&#x27;: [-122.348195, 47.723218]}&#92;&quot;,&#92;&quot;incident_number&#92;&quot;:&#92;&quot;F260019902&#92;&quot;},{&#92;&quot;address&#92;&quot;:&#92;&quot;1765 6th Ave S&#92;&quot;,&#92;&quot;type&#92;&quot;:&#92;&quot;Aid Response&#92;&quot;,&#92;&quot;datetime&#92;&quot;:&#92;&quot;2026-02-11T12:40:00.000&#92;&quot;,&#92;&quot;latitude&#92;&quot;:47.587559,&#92;&quot;longitude&#92;&quot;:-122.325971,&#92;&quot;report_location&#92;&quot;:&#92;&quot;{&#x27;type&#x27;: &#x27;Point&#x27;, &#x27;coordinates&#x27;: [-122.325971, 47.587559]}&#92;&quot;,&#92;&quot;incident_number&#92;&quot;:&#92;&quot;F260019900&#92;&quot;},{&#92;&quot;address&#92;&quot;:&#92;&quot;9th Ave / Alder St&#92;&quot;,&#92;&quot;type&#92;&quot;:&#92;&quot;Illegal Burn&#92;&quot;,&#92;&quot;datetime&#92;&quot;:&#92;&quot;2026-02-11T12:39:00.000&#92;&quot;,&#92;&quot;latitude&#92;&quot;:47.603415,&#92;&quot;longitude&#92;&quot;:-122.322791,&#92;&quot;report_location&#92;&quot;:&#92;&quot;{&#x27;type&#x27;: &#x27;Point&#x27;, &#x27;coordinates&#x27;: [-122.322791, 47.603415]}&#92;&quot;,&#92;&quot;incident_number&#92;&quot;:&#92;&quot;F260019899&#92;&quot;},{&#92;&quot;address&#92;&quot;:&#92;&quot;4th Ave / Pine St&#92;&quot;,&#92;&quot;type&#92;&quot;:&#92;&quot;EVENT - Special Event&#92;&quot;,&#92;&quot;datetime&#92;&quot;:&#92;&quot;2026-02-11T12:37:00.000&#92;&quot;,&#92;&quot;latitude&#92;&quot;:47.611207,&#92;&quot;longitude&#92;&quot;:-122.337592,&#92;&quot;report_location&#92;&quot;:&#92;&quot;{&#x27;type&#x27;: &#x27;Point&#x27;, &#x27;coordinates&#x27;: [-122.337592, 47.611207]}&#92;&quot;,&#92;&quot;incident_number&#92;&quot;:&#92;&quot;F260019898&#92;&quot;},{&#92;&quot;address&#92;&quot;:&#92;&quot;15th Ave Ne / Ne 89th St&#92;&quot;,&#92;&quot;type&#92;&quot;:&#92;&quot;MVI - Motor Vehicle Incident&#92;&quot;,&#92;&quot;datetime&#92;&quot;:&#92;&quot;2026-02-11T12:37:00.000&#92;&quot;,&#92;&quot;latitude&#92;&quot;:47.693069,&#92;&quot;longitude&#92;&quot;:-122.312174,&#92;&quot;report_location&#92;&quot;:&#92;&quot;{&#x27;type&#x27;: &#x27;Point&#x27;, &#x27;coordinates&#x27;: [-122.312174, 47.693069]}&#92;&quot;,&#92;&quot;incident_number&#92;&quot;:&#92;&quot;F260019897&#92;&quot;},{&#92;&quot;address&#92;&quot;:&#92;&quot;6727 RAINIER AVE S&#92;&quot;,&#92;&quot;type&#92;&quot;:&#92;&quot;Medic Response&#92;&quot;,&#92;&quot;datetime&#92;&quot;:&#92;&quot;2026-02-11T12:34:00.000&#92;&quot;,&#92;&quot;latitude&#92;&quot;:47.542238,&#92;&quot;longitude&#92;&quot;:-122.272642,&#92;&quot;report_location&#92;&quot;:&#92;&quot;{&#x27;type&#x27;: &#x27;Point&#x27;, &#x27;coordinates&#x27;: [-122.272642, 47.542238]}&#92;&quot;,&#92;&quot;incident_number&#92;&quot;:&#92;&quot;F260019893&#92;&quot;}]&quot;' data-total-rows='9195' data-total-columns='7' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;address&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;type&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;datetime&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;latitude&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;longitude&quot;,[&quot;number&quot;,&quot;float64&quot;]],[&quot;report_location&quot;,[&quot;string&quot;,&quot;str&quot;]],[&quot;incident_number&quot;,[&quot;string&quot;,&quot;str&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='true' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false' data-download-file-name='&quot;df&quot;'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "tiHX",
+      "code_hash": null,
+      "outputs": [],
+      "console": []
+    }
+  ]
+}
