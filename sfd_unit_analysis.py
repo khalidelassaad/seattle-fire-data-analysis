@@ -8,8 +8,9 @@ app = marimo.App(width="medium")
 def _():
     import marimo as mo
     import pandas as pd
+    from datetime import datetime
 
-    return mo, pd
+    return datetime, mo, pd
 
 
 @app.cell
@@ -22,26 +23,123 @@ def _(pd):
 
 @app.cell
 def _(mo, unit_dataframe):
-    unit_dropdown = mo.ui.dropdown(sorted(unit_dataframe["unit"]))
+    unit_dropdown = mo.ui.dropdown(
+        sorted(unit_dataframe["unit"]),
+        value = min(unit_dataframe["unit"])
+    )
     return (unit_dropdown,)
-
-
-@app.cell
-def _(mo, unit_dropdown):
-    mo.md(f"Choose a unit: {unit_dropdown}")
-    return
 
 
 @app.cell
 def _(unit_dropdown):
     unit = unit_dropdown.value
-    unit
+    return (unit,)
+
+
+@app.cell
+def _(datetime, incidents_dataframe, mo):
+    incidents_list = [incident for incident in incidents_dataframe["incident_number"] if incident[0] == "F"]
+    first_incident = min(incidents_list)
+    last_incident = max(incidents_list)
+    start_datetime_str = min(incidents_dataframe["datetime"])
+    start_datetime = datetime.strptime(start_datetime_str, "%Y-%m-%dT%H:%M:%S.%f").strftime("%b %d, %Y")
+    end_datetime_str = max(incidents_dataframe["datetime"])
+    end_datetime = datetime.strptime(end_datetime_str, "%Y-%m-%dT%H:%M:%S.%f").strftime("%b %d, %Y")
+
+    mo.hstack(
+        [
+            mo.stat(
+                value=len(incidents_dataframe),
+                label="Total Incidents in this dataset",
+                caption=f"Incidents from {first_incident} to {last_incident}"
+            ),
+            mo.stat(
+                value=start_datetime,
+                label="Dataset Start Date",
+            ),
+            mo.stat(
+                value=end_datetime,
+                label="Dataset End Date",
+            ),
+        ]
+     )
     return
 
 
 @app.cell
-def _(incidents_dataframe):
-    incidents_dataframe
+def _(unit, unit_dataframe):
+    selected_unit_dataframe = unit_dataframe[unit_dataframe["unit"] == unit]
+    return (selected_unit_dataframe,)
+
+
+@app.cell
+def _(pd):
+    def minutes_to_minute_string(minutes):
+        if pd.isna(minutes):
+            return "0m 0s"
+        seconds = int(((minutes % 1) * 60) // 1)
+        minutes = int(minutes // 1)
+        if minutes >= 60:
+            return f"{minutes//60}h {minutes%60}m"
+        else:
+            return f"{minutes}m {seconds}s"
+
+    return (minutes_to_minute_string,)
+
+
+@app.cell
+def _(minutes_to_minute_string, mo, selected_unit_dataframe, unit):
+    stat_list = [
+        mo.stat(
+            value=unit,
+            label="Unit",
+        ),
+        mo.stat(
+            value=selected_unit_dataframe["number_of_incidents"].iloc[0],
+            label="# of Incidents",
+        ),
+        mo.stat(
+            value="{:.1f}%".format(selected_unit_dataframe["leadership_rate"].iloc[0]*100),
+            label="% of Incidents Led",
+        ),
+        mo.stat(
+            value=minutes_to_minute_string(selected_unit_dataframe["average_time_in_transit"].iloc[0]),
+            label="Avg. Time in Transit",
+        ),
+        mo.stat(
+            value=minutes_to_minute_string(selected_unit_dataframe["average_time_on_site"].iloc[0]),
+            label="Avg. Time on Site",
+        ),
+        mo.stat(
+            value=minutes_to_minute_string(selected_unit_dataframe["average_time_assigned"].iloc[0]),
+            label="Avg. Time Assigned",
+        ),
+            mo.stat(
+            value=minutes_to_minute_string(selected_unit_dataframe["total_time_in_transit"].iloc[0]),
+            label="Total Time in Transit",
+        ),
+        mo.stat(
+            value=minutes_to_minute_string(selected_unit_dataframe["total_time_on_site"].iloc[0]),
+            label="Total Time on Site",
+        ),
+        mo.stat(
+            value=minutes_to_minute_string(selected_unit_dataframe["total_time_assigned"].iloc[0]),
+            label="Total Time Assigned",
+        ),
+    ]
+    return (stat_list,)
+
+
+@app.cell
+def _(mo, stat_list, unit_dropdown):
+    mo.vstack(
+        [
+            mo.md(f"Choose a unit: {unit_dropdown}"),
+            mo.hstack(stat_list[:3], justify="center"),
+            mo.hstack(stat_list[3:6], justify="center"),
+            mo.hstack(stat_list[6:], justify="center"),
+        ]
+    )
     return
 
 
