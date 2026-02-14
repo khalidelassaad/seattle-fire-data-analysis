@@ -15,9 +15,9 @@ def _():
 
 @app.cell
 def _(mo, pd):
-    incidents_dataframe = pd.read_excel(mo.notebook_location() / "public" / "incidents_last_30_days.xlsx", index_col=0)
-    unit_dispatches_dataframe = pd.read_excel(mo.notebook_location() / "public" / "unit_dispatches_last_30_days.xlsx", index_col=0)
-    unit_dataframe = pd.read_excel(mo.notebook_location() / "public" / "unit_stats_last_30_days.xlsx", index_col=0)
+    incidents_dataframe = pd.read_csv(mo.notebook_location() / "public" / "incidents_last_30_days.csv", index_col=0)
+    unit_dispatches_dataframe = pd.read_csv(mo.notebook_location() / "public" / "unit_dispatches_last_30_days.csv", index_col=0)
+    unit_dataframe = pd.read_csv(mo.notebook_location() / "public" / "unit_stats_last_30_days.csv", index_col=0)
     return incidents_dataframe, unit_dataframe
 
 
