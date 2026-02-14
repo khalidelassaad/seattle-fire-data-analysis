@@ -17,19 +17,16 @@ def _():
 def _(mo, pd):
     incidents_dataframe = pd.read_csv(
         mo.notebook_location() / "public" / "incidents_last_30_days.csv", 
-        index_col=0,
         compression=None,
         engine="python"
     )
     unit_dispatches_dataframe = pd.read_csv(
         mo.notebook_location() / "public" / "unit_dispatches_last_30_days.csv", 
-        index_col=0,
         compression=None,
         engine="python"
     )
     unit_dataframe = pd.read_csv(
         mo.notebook_location() / "public" / "unit_stats_last_30_days.csv", 
-        index_col=0,
         compression=None,
         engine="python"
     )
