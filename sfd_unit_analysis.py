@@ -22,6 +22,14 @@ def _(mo, pd):
 
 
 @app.cell
+def _(mo):
+    mo.md("""
+    #Seattle Fire Department - Unit Dispatches Last 30 Days
+    """)
+    return
+
+
+@app.cell
 def _(mo, unit_dataframe):
     unit_dropdown = mo.ui.dropdown(
         sorted(unit_dataframe["unit"]),
