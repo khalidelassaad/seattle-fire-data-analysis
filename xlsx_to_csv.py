@@ -34,10 +34,10 @@ def _(
     unit_dispatches_dataframe,
     unit_dispatches_dataframe_2,
 ):
-    incidents_dataframe.to_csv(mo.notebook_location() / "public" / "incidents_last_30_days.csv", index=False)
-    unit_dispatches_dataframe.to_csv(mo.notebook_location() / "public" / "unit_dispatches_last_30_days.csv", index=False)
-    unit_dataframe.to_csv(mo.notebook_location() / "public" / "unit_stats_last_30_days.csv", index=False)
-    unit_dispatches_dataframe_2.to_csv(mo.notebook_location() / "public" / "unit_dispatches.csv", index=False)
+    incidents_dataframe.to_csv(mo.notebook_location() / "public" / "incidents_last_30_days.csv")
+    unit_dispatches_dataframe.to_csv(mo.notebook_location() / "public" / "unit_dispatches_last_30_days.csv")
+    unit_dataframe.to_csv(mo.notebook_location() / "public" / "unit_stats_last_30_days.csv")
+    unit_dispatches_dataframe_2.to_csv(mo.notebook_location() / "public" / "unit_dispatches.csv")
     return
 
 
