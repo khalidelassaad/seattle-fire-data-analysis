@@ -19,7 +19,7 @@
     },
     {
       "id": "MJUe",
-      "code_hash": "992a3662ef50514523403012ec8332d4",
+      "code_hash": "0735d45044bbfac06723d3446e25e90f",
       "outputs": [
         {
           "type": "data",
@@ -44,7 +44,7 @@
       "console": []
     },
     {
-      "id": "zKmF",
+      "id": "bkHC",
       "code_hash": "6b8baa402ea32b035b10b46ea80c572f",
       "outputs": [
         {
@@ -57,7 +57,7 @@
       "console": []
     },
     {
-      "id": "xfDU",
+      "id": "lEQa",
       "code_hash": "76a4c5e9d6145ad4d1690c788c664635",
       "outputs": [
         {
@@ -70,7 +70,7 @@
       "console": []
     },
     {
-      "id": "qBMF",
+      "id": "PKri",
       "code_hash": "11c3e738c487fd617a51f454f4cf5a38",
       "outputs": [
         {
@@ -83,7 +83,7 @@
       "console": []
     },
     {
-      "id": "dJPy",
+      "id": "Xref",
       "code_hash": "0ca132d3bb47603df3be1e6d90d89b2d",
       "outputs": [
         {
@@ -96,7 +96,7 @@
       "console": []
     },
     {
-      "id": "RrqO",
+      "id": "SFPL",
       "code_hash": "21f494961184bf97705729038e9130e2",
       "outputs": [
         {
@@ -109,22 +109,16 @@
       "console": []
     },
     {
-      "id": "ytwg",
+      "id": "BYtC",
       "code_hash": "c9c4ba8386168d5c42a14bec16196d2e",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/html": "<div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Choose a unit: <marimo-ui-element object-id='vblA-0' random-id='340e648b-23da-1ae1-f5dc-fea066e647bb'><marimo-dropdown data-initial-value='[&quot;A10&quot;]' data-label='null' data-options='[&quot;A10&quot;,&quot;A14&quot;,&quot;A17&quot;,&quot;A2&quot;,&quot;A22&quot;,&quot;A25&quot;,&quot;A26&quot;,&quot;A31&quot;,&quot;A4&quot;,&quot;A5&quot;,&quot;A7&quot;,&quot;AIR1&quot;,&quot;AIR10&quot;,&quot;AIR26&quot;,&quot;B2&quot;,&quot;B4&quot;,&quot;B5&quot;,&quot;B6&quot;,&quot;B7&quot;,&quot;B77&quot;,&quot;CHAP5&quot;,&quot;CHAP6&quot;,&quot;CHAP7&quot;,&quot;DECON1&quot;,&quot;DEP1&quot;,&quot;E10&quot;,&quot;E11&quot;,&quot;E13&quot;,&quot;E16&quot;,&quot;E17&quot;,&quot;E18&quot;,&quot;E2&quot;,&quot;E20&quot;,&quot;E21&quot;,&quot;E22&quot;,&quot;E24&quot;,&quot;E25&quot;,&quot;E26&quot;,&quot;E27&quot;,&quot;E28&quot;,&quot;E29&quot;,&quot;E30&quot;,&quot;E31&quot;,&quot;E32&quot;,&quot;E33&quot;,&quot;E34&quot;,&quot;E35&quot;,&quot;E36&quot;,&quot;E37&quot;,&quot;E38&quot;,&quot;E39&quot;,&quot;E40&quot;,&quot;E41&quot;,&quot;E5&quot;,&quot;E6&quot;,&quot;E8&quot;,&quot;E9&quot;,&quot;E90&quot;,&quot;E95&quot;,&quot;EVENT1&quot;,&quot;EVENT10&quot;,&quot;EVENT11&quot;,&quot;EVENT12&quot;,&quot;EVENT13&quot;,&quot;EVENT14&quot;,&quot;EVENT15&quot;,&quot;EVENT2&quot;,&quot;EVENT3&quot;,&quot;EVENT4&quot;,&quot;EVENT5&quot;,&quot;EVENT6&quot;,&quot;FAC&quot;,&quot;FAC1&quot;,&quot;FB1&quot;,&quot;FB3&quot;,&quot;FB4&quot;,&quot;FIREBOAT&quot;,&quot;H1&quot;,&quot;H11&quot;,&quot;H2&quot;,&quot;H98&quot;,&quot;H99&quot;,&quot;HAZ1&quot;,&quot;HAZ80&quot;,&quot;HUSKY-EMS&quot;,&quot;L1&quot;,&quot;L10&quot;,&quot;L11&quot;,&quot;L12&quot;,&quot;L13&quot;,&quot;L3&quot;,&quot;L4&quot;,&quot;L5&quot;,&quot;L6&quot;,&quot;L8&quot;,&quot;L9&quot;,&quot;LUMEN-CMD&quot;,&quot;LUMEN-EMS&quot;,&quot;LUMEN-HAZ&quot;,&quot;M1&quot;,&quot;M10&quot;,&quot;M17&quot;,&quot;M18&quot;,&quot;M26&quot;,&quot;M28&quot;,&quot;M31&quot;,&quot;M32&quot;,&quot;M44&quot;,&quot;MAR5&quot;,&quot;MIH&quot;,&quot;MRN1&quot;,&quot;MVU1&quot;,&quot;NOR-M163&quot;,&quot;PIO&quot;,&quot;PIO2&quot;,&quot;PLEDG-EMS&quot;,&quot;PTRL4&quot;,&quot;R1&quot;,&quot;RB5&quot;,&quot;REHAB1&quot;,&quot;SAFT2&quot;,&quot;SQ14&quot;,&quot;STAF10&quot;,&quot;TMOB-EMS&quot;,&quot;WAMU-EMS&quot;]' data-allow-select-none='false' data-searchable='false' data-full-width='false'></marimo-dropdown></marimo-ui-element></span></span><div style='display: flex;flex: 1;flex-direction: row;justify-content: center;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><marimo-stat data-value='&quot;A10&quot;' data-label='&quot;Unit&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat><marimo-stat data-value='460' data-label='&quot;# of Incidents&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat><marimo-stat data-value='&quot;79.1%&quot;' data-label='&quot;% of Incidents Led&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat></div><div style='display: flex;flex: 1;flex-direction: row;justify-content: center;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><marimo-stat data-value='&quot;4m 14s&quot;' data-label='&quot;Avg. Time in Transit&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat><marimo-stat data-value='&quot;21m 24s&quot;' data-label='&quot;Avg. Time on Site&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat><marimo-stat data-value='&quot;23m 42s&quot;' data-label='&quot;Avg. Time Assigned&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat></div><div style='display: flex;flex: 1;flex-direction: row;justify-content: center;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><marimo-stat data-value='&quot;29h 36m&quot;' data-label='&quot;Total Time in Transit&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat><marimo-stat data-value='&quot;149h 8m&quot;' data-label='&quot;Total Time on Site&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat><marimo-stat data-value='&quot;181h 25m&quot;' data-label='&quot;Total Time Assigned&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat></div></div>"
+            "text/html": "<div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Choose a unit: <marimo-ui-element object-id='vblA-0' random-id='b4683463-6e87-3d0a-caf7-d41a03665cad'><marimo-dropdown data-initial-value='[&quot;A10&quot;]' data-label='null' data-options='[&quot;A10&quot;,&quot;A14&quot;,&quot;A17&quot;,&quot;A2&quot;,&quot;A22&quot;,&quot;A25&quot;,&quot;A26&quot;,&quot;A31&quot;,&quot;A4&quot;,&quot;A5&quot;,&quot;A7&quot;,&quot;AIR1&quot;,&quot;AIR10&quot;,&quot;AIR26&quot;,&quot;B2&quot;,&quot;B4&quot;,&quot;B5&quot;,&quot;B6&quot;,&quot;B7&quot;,&quot;B77&quot;,&quot;CHAP5&quot;,&quot;CHAP6&quot;,&quot;CHAP7&quot;,&quot;DECON1&quot;,&quot;DEP1&quot;,&quot;E10&quot;,&quot;E11&quot;,&quot;E13&quot;,&quot;E16&quot;,&quot;E17&quot;,&quot;E18&quot;,&quot;E2&quot;,&quot;E20&quot;,&quot;E21&quot;,&quot;E22&quot;,&quot;E24&quot;,&quot;E25&quot;,&quot;E26&quot;,&quot;E27&quot;,&quot;E28&quot;,&quot;E29&quot;,&quot;E30&quot;,&quot;E31&quot;,&quot;E32&quot;,&quot;E33&quot;,&quot;E34&quot;,&quot;E35&quot;,&quot;E36&quot;,&quot;E37&quot;,&quot;E38&quot;,&quot;E39&quot;,&quot;E40&quot;,&quot;E41&quot;,&quot;E5&quot;,&quot;E6&quot;,&quot;E8&quot;,&quot;E9&quot;,&quot;E90&quot;,&quot;E95&quot;,&quot;EVENT1&quot;,&quot;EVENT10&quot;,&quot;EVENT11&quot;,&quot;EVENT12&quot;,&quot;EVENT13&quot;,&quot;EVENT14&quot;,&quot;EVENT15&quot;,&quot;EVENT2&quot;,&quot;EVENT3&quot;,&quot;EVENT4&quot;,&quot;EVENT5&quot;,&quot;EVENT6&quot;,&quot;FAC&quot;,&quot;FAC1&quot;,&quot;FB1&quot;,&quot;FB3&quot;,&quot;FB4&quot;,&quot;FIREBOAT&quot;,&quot;H1&quot;,&quot;H11&quot;,&quot;H2&quot;,&quot;H98&quot;,&quot;H99&quot;,&quot;HAZ1&quot;,&quot;HAZ80&quot;,&quot;HUSKY-EMS&quot;,&quot;L1&quot;,&quot;L10&quot;,&quot;L11&quot;,&quot;L12&quot;,&quot;L13&quot;,&quot;L3&quot;,&quot;L4&quot;,&quot;L5&quot;,&quot;L6&quot;,&quot;L8&quot;,&quot;L9&quot;,&quot;LUMEN-CMD&quot;,&quot;LUMEN-EMS&quot;,&quot;LUMEN-HAZ&quot;,&quot;M1&quot;,&quot;M10&quot;,&quot;M17&quot;,&quot;M18&quot;,&quot;M26&quot;,&quot;M28&quot;,&quot;M31&quot;,&quot;M32&quot;,&quot;M44&quot;,&quot;MAR5&quot;,&quot;MIH&quot;,&quot;MRN1&quot;,&quot;MVU1&quot;,&quot;NOR-M163&quot;,&quot;PIO&quot;,&quot;PIO2&quot;,&quot;PLEDG-EMS&quot;,&quot;PTRL4&quot;,&quot;R1&quot;,&quot;RB5&quot;,&quot;REHAB1&quot;,&quot;SAFT2&quot;,&quot;SQ14&quot;,&quot;STAF10&quot;,&quot;TMOB-EMS&quot;,&quot;WAMU-EMS&quot;]' data-allow-select-none='false' data-searchable='false' data-full-width='false'></marimo-dropdown></marimo-ui-element></span></span><div style='display: flex;flex: 1;flex-direction: row;justify-content: center;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><marimo-stat data-value='&quot;A10&quot;' data-label='&quot;Unit&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat><marimo-stat data-value='460' data-label='&quot;# of Incidents&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat><marimo-stat data-value='&quot;79.1%&quot;' data-label='&quot;% of Incidents Led&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat></div><div style='display: flex;flex: 1;flex-direction: row;justify-content: center;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><marimo-stat data-value='&quot;4m 14s&quot;' data-label='&quot;Avg. Time in Transit&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat><marimo-stat data-value='&quot;21m 24s&quot;' data-label='&quot;Avg. Time on Site&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat><marimo-stat data-value='&quot;23m 42s&quot;' data-label='&quot;Avg. Time Assigned&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat></div><div style='display: flex;flex: 1;flex-direction: row;justify-content: center;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><marimo-stat data-value='&quot;29h 36m&quot;' data-label='&quot;Total Time in Transit&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat><marimo-stat data-value='&quot;149h 8m&quot;' data-label='&quot;Total Time on Site&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat><marimo-stat data-value='&quot;181h 25m&quot;' data-label='&quot;Total Time Assigned&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat></div></div>"
           }
         }
       ],
-      "console": []
-    },
-    {
-      "id": "ooRI",
-      "code_hash": null,
-      "outputs": [],
       "console": []
     }
   ]
