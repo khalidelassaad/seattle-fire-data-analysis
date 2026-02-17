@@ -6,7 +6,20 @@
   "cells": [
     {
       "id": "Hbol",
-      "code_hash": "8e7ddffb3618d6f1987033b68e620036",
+      "code_hash": "315bc23f20797429eb9c0a069291a76d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "HhSl",
+      "code_hash": "e6a6784881975f88496a03d09d736294",
       "outputs": [
         {
           "type": "data",
@@ -19,7 +32,7 @@
     },
     {
       "id": "MJUe",
-      "code_hash": "c4dcc33b6268de0695920f7d10365130",
+      "code_hash": "ed0aa4d333601951bcb9fe8d83f54a4b",
       "outputs": [
         {
           "type": "data",
@@ -128,7 +141,7 @@
         {
           "type": "data",
           "data": {
-            "text/html": "<div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Choose a unit: <marimo-ui-element object-id='bkHC-0' random-id='c582bbb1-c3b1-ec10-0410-a91e688b2cf9'><marimo-dropdown data-initial-value='[&quot;A10&quot;]' data-label='null' data-options='[&quot;A10&quot;,&quot;A14&quot;,&quot;A17&quot;,&quot;A2&quot;,&quot;A22&quot;,&quot;A25&quot;,&quot;A26&quot;,&quot;A31&quot;,&quot;A4&quot;,&quot;A5&quot;,&quot;A7&quot;,&quot;AIR1&quot;,&quot;AIR10&quot;,&quot;AIR26&quot;,&quot;B2&quot;,&quot;B4&quot;,&quot;B5&quot;,&quot;B6&quot;,&quot;B7&quot;,&quot;B77&quot;,&quot;CHAP5&quot;,&quot;CHAP6&quot;,&quot;CHAP7&quot;,&quot;DECON1&quot;,&quot;DEP1&quot;,&quot;E10&quot;,&quot;E11&quot;,&quot;E13&quot;,&quot;E16&quot;,&quot;E17&quot;,&quot;E18&quot;,&quot;E2&quot;,&quot;E20&quot;,&quot;E21&quot;,&quot;E22&quot;,&quot;E24&quot;,&quot;E25&quot;,&quot;E26&quot;,&quot;E27&quot;,&quot;E28&quot;,&quot;E29&quot;,&quot;E30&quot;,&quot;E31&quot;,&quot;E32&quot;,&quot;E33&quot;,&quot;E34&quot;,&quot;E35&quot;,&quot;E36&quot;,&quot;E37&quot;,&quot;E38&quot;,&quot;E39&quot;,&quot;E40&quot;,&quot;E41&quot;,&quot;E5&quot;,&quot;E6&quot;,&quot;E8&quot;,&quot;E9&quot;,&quot;E90&quot;,&quot;E95&quot;,&quot;EVENT1&quot;,&quot;EVENT10&quot;,&quot;EVENT11&quot;,&quot;EVENT12&quot;,&quot;EVENT13&quot;,&quot;EVENT14&quot;,&quot;EVENT15&quot;,&quot;EVENT2&quot;,&quot;EVENT3&quot;,&quot;EVENT4&quot;,&quot;EVENT5&quot;,&quot;EVENT6&quot;,&quot;FAC&quot;,&quot;FAC1&quot;,&quot;FB1&quot;,&quot;FB3&quot;,&quot;FB4&quot;,&quot;FIREBOAT&quot;,&quot;H1&quot;,&quot;H11&quot;,&quot;H2&quot;,&quot;H98&quot;,&quot;H99&quot;,&quot;HAZ1&quot;,&quot;HAZ80&quot;,&quot;HUSKY-EMS&quot;,&quot;L1&quot;,&quot;L10&quot;,&quot;L11&quot;,&quot;L12&quot;,&quot;L13&quot;,&quot;L3&quot;,&quot;L4&quot;,&quot;L5&quot;,&quot;L6&quot;,&quot;L8&quot;,&quot;L9&quot;,&quot;LUMEN-CMD&quot;,&quot;LUMEN-EMS&quot;,&quot;LUMEN-HAZ&quot;,&quot;M1&quot;,&quot;M10&quot;,&quot;M17&quot;,&quot;M18&quot;,&quot;M26&quot;,&quot;M28&quot;,&quot;M31&quot;,&quot;M32&quot;,&quot;M44&quot;,&quot;MAR5&quot;,&quot;MIH&quot;,&quot;MRN1&quot;,&quot;MVU1&quot;,&quot;NOR-M163&quot;,&quot;PIO&quot;,&quot;PIO2&quot;,&quot;PLEDG-EMS&quot;,&quot;PTRL4&quot;,&quot;R1&quot;,&quot;RB5&quot;,&quot;REHAB1&quot;,&quot;SAFT2&quot;,&quot;SQ14&quot;,&quot;STAF10&quot;,&quot;TMOB-EMS&quot;,&quot;WAMU-EMS&quot;]' data-allow-select-none='false' data-searchable='false' data-full-width='false'></marimo-dropdown></marimo-ui-element></span></span><div style='display: flex;flex: 1;flex-direction: row;justify-content: center;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><marimo-stat data-value='&quot;A10&quot;' data-label='&quot;Unit&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat><marimo-stat data-value='460' data-label='&quot;# of Incidents&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat><marimo-stat data-value='&quot;79.1%&quot;' data-label='&quot;% of Incidents Led&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat></div><div style='display: flex;flex: 1;flex-direction: row;justify-content: center;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><marimo-stat data-value='&quot;4m 14s&quot;' data-label='&quot;Avg. Time in Transit&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat><marimo-stat data-value='&quot;21m 24s&quot;' data-label='&quot;Avg. Time on Site&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat><marimo-stat data-value='&quot;23m 42s&quot;' data-label='&quot;Avg. Time Assigned&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat></div><div style='display: flex;flex: 1;flex-direction: row;justify-content: center;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><marimo-stat data-value='&quot;29h 36m&quot;' data-label='&quot;Total Time in Transit&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat><marimo-stat data-value='&quot;149h 8m&quot;' data-label='&quot;Total Time on Site&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat><marimo-stat data-value='&quot;181h 25m&quot;' data-label='&quot;Total Time Assigned&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat></div></div>"
+            "text/html": "<div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Choose a unit: <marimo-ui-element object-id='bkHC-0' random-id='77ad4e31-665d-c83f-6add-56e6b82bd20a'><marimo-dropdown data-initial-value='[&quot;A10&quot;]' data-label='null' data-options='[&quot;A10&quot;,&quot;A14&quot;,&quot;A17&quot;,&quot;A2&quot;,&quot;A22&quot;,&quot;A25&quot;,&quot;A26&quot;,&quot;A31&quot;,&quot;A4&quot;,&quot;A5&quot;,&quot;A7&quot;,&quot;AIR1&quot;,&quot;AIR10&quot;,&quot;AIR26&quot;,&quot;B2&quot;,&quot;B4&quot;,&quot;B5&quot;,&quot;B6&quot;,&quot;B7&quot;,&quot;B77&quot;,&quot;CHAP5&quot;,&quot;CHAP6&quot;,&quot;CHAP7&quot;,&quot;DECON1&quot;,&quot;DEP1&quot;,&quot;E10&quot;,&quot;E11&quot;,&quot;E13&quot;,&quot;E16&quot;,&quot;E17&quot;,&quot;E18&quot;,&quot;E2&quot;,&quot;E20&quot;,&quot;E21&quot;,&quot;E22&quot;,&quot;E24&quot;,&quot;E25&quot;,&quot;E26&quot;,&quot;E27&quot;,&quot;E28&quot;,&quot;E29&quot;,&quot;E30&quot;,&quot;E31&quot;,&quot;E32&quot;,&quot;E33&quot;,&quot;E34&quot;,&quot;E35&quot;,&quot;E36&quot;,&quot;E37&quot;,&quot;E38&quot;,&quot;E39&quot;,&quot;E40&quot;,&quot;E41&quot;,&quot;E5&quot;,&quot;E6&quot;,&quot;E8&quot;,&quot;E9&quot;,&quot;E90&quot;,&quot;E95&quot;,&quot;EVENT1&quot;,&quot;EVENT10&quot;,&quot;EVENT11&quot;,&quot;EVENT12&quot;,&quot;EVENT13&quot;,&quot;EVENT14&quot;,&quot;EVENT15&quot;,&quot;EVENT2&quot;,&quot;EVENT3&quot;,&quot;EVENT4&quot;,&quot;EVENT5&quot;,&quot;EVENT6&quot;,&quot;FAC&quot;,&quot;FAC1&quot;,&quot;FB1&quot;,&quot;FB3&quot;,&quot;FB4&quot;,&quot;FIREBOAT&quot;,&quot;H1&quot;,&quot;H11&quot;,&quot;H2&quot;,&quot;H98&quot;,&quot;H99&quot;,&quot;HAZ1&quot;,&quot;HAZ80&quot;,&quot;HUSKY-EMS&quot;,&quot;L1&quot;,&quot;L10&quot;,&quot;L11&quot;,&quot;L12&quot;,&quot;L13&quot;,&quot;L3&quot;,&quot;L4&quot;,&quot;L5&quot;,&quot;L6&quot;,&quot;L8&quot;,&quot;L9&quot;,&quot;LUMEN-CMD&quot;,&quot;LUMEN-EMS&quot;,&quot;LUMEN-HAZ&quot;,&quot;M1&quot;,&quot;M10&quot;,&quot;M17&quot;,&quot;M18&quot;,&quot;M26&quot;,&quot;M28&quot;,&quot;M31&quot;,&quot;M32&quot;,&quot;M44&quot;,&quot;MAR5&quot;,&quot;MIH&quot;,&quot;MRN1&quot;,&quot;MVU1&quot;,&quot;NOR-M163&quot;,&quot;PIO&quot;,&quot;PIO2&quot;,&quot;PLEDG-EMS&quot;,&quot;PTRL4&quot;,&quot;R1&quot;,&quot;RB5&quot;,&quot;REHAB1&quot;,&quot;SAFT2&quot;,&quot;SQ14&quot;,&quot;STAF10&quot;,&quot;TMOB-EMS&quot;,&quot;WAMU-EMS&quot;]' data-allow-select-none='false' data-searchable='false' data-full-width='false'></marimo-dropdown></marimo-ui-element></span></span><div style='display: flex;flex: 1;flex-direction: row;justify-content: center;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><marimo-stat data-value='&quot;A10&quot;' data-label='&quot;Unit&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat><marimo-stat data-value='460' data-label='&quot;# of Incidents&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat><marimo-stat data-value='&quot;79.1%&quot;' data-label='&quot;% of Incidents Led&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat></div><div style='display: flex;flex: 1;flex-direction: row;justify-content: center;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><marimo-stat data-value='&quot;4m 14s&quot;' data-label='&quot;Avg. Time in Transit&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat><marimo-stat data-value='&quot;21m 24s&quot;' data-label='&quot;Avg. Time on Site&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat><marimo-stat data-value='&quot;23m 42s&quot;' data-label='&quot;Avg. Time Assigned&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat></div><div style='display: flex;flex: 1;flex-direction: row;justify-content: center;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><marimo-stat data-value='&quot;29h 36m&quot;' data-label='&quot;Total Time in Transit&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat><marimo-stat data-value='&quot;149h 8m&quot;' data-label='&quot;Total Time on Site&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat><marimo-stat data-value='&quot;181h 25m&quot;' data-label='&quot;Total Time Assigned&quot;' data-bordered='false' data-target_direction='&quot;increase&quot;'></marimo-stat></div></div>"
           }
         }
       ],
@@ -137,14 +150,7 @@
     {
       "id": "Kclp",
       "code_hash": null,
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/plain": ""
-          }
-        }
-      ],
+      "outputs": [],
       "console": []
     }
   ]

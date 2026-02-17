@@ -6,33 +6,37 @@ app = marimo.App(width="medium")
 
 @app.cell
 def _():
+    from datetime import datetime
+
     import marimo as mo
     import pandas as pd
-    from datetime import datetime
 
     return datetime, mo, pd
 
 
 @app.cell
 def _(mo, pd):
-    incidents_dataframe = pd.read_csv(
-        mo.notebook_location() / "public" / "incidents_last_30_days.csv", 
-        index_col=0,
-        compression=None,
-        engine="python"
-    )
-    unit_dispatches_dataframe = pd.read_csv(
-        mo.notebook_location() / "public" / "unit_dispatches_last_30_days.csv", 
-        index_col=0,
-        compression=None,
-        engine="python"
-    )
-    unit_dataframe = pd.read_csv(
-        mo.notebook_location() / "public" / "unit_stats_last_30_days.csv", 
-        index_col=0,
-        compression=None,
-        engine="python"
-    )
+    async def read_csv_into_dataframe(filename):
+        filepath = mo.notebook_location() / "public" / filename
+        if "http" not in str(mo.notebook_location()):
+            return pd.read_csv(
+                filepath, 
+                index_col=0
+            )
+        from pyodide.http import pyfetch
+        from io import StringIO
+        response = await pyfetch(filepath)
+        data = await response.text()
+        return pd.read_csv(StringIO(data))
+
+    return (read_csv_into_dataframe,)
+
+
+@app.cell
+async def _(read_csv_into_dataframe):
+    incidents_dataframe = await read_csv_into_dataframe("incidents_last_30_days.csv")
+    unit_dispatches_dataframe = await read_csv_into_dataframe("unit_dispatches_last_30_days.csv")
+    unit_dataframe = await read_csv_into_dataframe("unit_stats_last_30_days.csv")
     return incidents_dataframe, unit_dataframe
 
 
