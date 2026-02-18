@@ -172,50 +172,65 @@ def _(mo, stat_list, unit_dropdown):
 
 
 @app.cell
-def _(incidents_dataframe):
-    incidents_dataframe
-    return
-
-
-@app.cell
-def _(unit_dispatches_dataframe):
-    unit_dispatches_dataframe["incident_number"].value_counts()["F260019911"]
-    return
-
-
-@app.cell
-def _(alt, incidents_dataframe, unit_dispatches_dataframe):
-    # Graph 1
+def _(incidents_dataframe, unit_dispatches_dataframe):
+    # Graph 1 Data
     data_list = []
-    incident_to_unit_counts_dict = unit_dispatches_dataframe["incident_number"].value_counts()
 
     for _, row in incidents_dataframe.iterrows():
-        unit_count = incident_to_unit_counts_dict.get(row["incident_number"])
+        unit_dispatches_dataframe_filtered_to_incident = unit_dispatches_dataframe[unit_dispatches_dataframe["incident_number"] == row["incident_number"]]
+        unit_set = set(unit_dispatches_dataframe_filtered_to_incident["unit"])
+        if not len(unit_set):
+            continue
+        units = unit_dispatches_dataframe_filtered_to_incident[["unit", "is_in_charge"]]
+        units_in_charge_list = list(units[units["is_in_charge"]==True]["unit"])
+        unit_in_charge = units_in_charge_list[0] if len(units_in_charge_list) else None
         data_dict = {
-            "datetime": row["datetime"],
-            "incident_number": row["incident_number"],
-            "type": row["type"],
-            "address": row["address"],
-            "number_of_units_responding": 0 if not unit_count else unit_count
+            "Time": row["datetime"],
+            "Incident Number": row["incident_number"],
+            "Incident Type": row["type"],
+            "Address": row["address"],
+            "Unit Count": len(unit_set),
+            "Lead Unit": unit_in_charge,
+            "Dispatched Units": ", ".join(sorted(unit_set)),
+            "Unit Set": unit_set
         }
         data_list.append(data_dict)
-        break
+    return (data_list,)
 
-    data = alt.Data(values=data_list) # Should be list of dicts
+
+@app.cell
+def _(alt, data_list, unit):
+    # Graph 1 Visualization
+    data = alt.Data(values=data_list)
     # One mark per incident
-    data_list
     # Incident date on X axis
     # Number of responders on Y axis
-    # Color by type of lead unit? type of incident?
+    # Color by type of lead unit? type of incident? if unit is selected?
     # Click on mark selects lead unit in dropdown?
     # Hover over incident shows additional incident data...
 
+    chart = alt.Chart(data).mark_point().encode(
+        x='Time:T',
+        y=alt.Y('Unit Count:Q', scale=alt.Scale(type='log', domain=[1,30])),
+        color=alt.condition(
+            alt.expr.indexof(alt.datum["Unit Set"], unit) >= 0,
+            alt.value('red'),
+            alt.value('gray')
+        ),
+        shape=alt.condition(
+            alt.datum["Lead Unit"] == unit,
+            alt.value('square'),
+            alt.value('circle')
+        ),
+        size=alt.condition(
+            alt.expr.indexof(alt.datum["Unit Set"], unit) >= 0,
+            alt.value(100),
+            alt.value(20)
+        ),
+        tooltip=["Incident Number:N", "Incident Type:N", "Time:T", "Address:N", "Lead Unit:N", "Dispatched Units:N", 'Unit Count:Q']
+    ).interactive()
 
-    # alt.Chart(cars).mark_point().encode(
-    #     x='Horsepower',
-    #     y='Miles_per_Gallon',
-    #     color='Origin',
-    # ).interactive()
+    chart
     return
 
 
