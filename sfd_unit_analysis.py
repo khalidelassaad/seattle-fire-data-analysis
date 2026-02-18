@@ -8,10 +8,11 @@ app = marimo.App(width="medium")
 def _():
     from datetime import datetime
 
+    import altair as alt
     import marimo as mo
     import pandas as pd
 
-    return datetime, mo, pd
+    return alt, datetime, mo, pd
 
 
 @app.cell
@@ -37,7 +38,7 @@ async def _(read_csv_into_dataframe):
     incidents_dataframe = await read_csv_into_dataframe("incidents_last_30_days.csv")
     unit_dispatches_dataframe = await read_csv_into_dataframe("unit_dispatches_last_30_days.csv")
     unit_dataframe = await read_csv_into_dataframe("unit_stats_last_30_days.csv")
-    return incidents_dataframe, unit_dataframe
+    return incidents_dataframe, unit_dataframe, unit_dispatches_dataframe
 
 
 @app.cell
@@ -171,20 +172,50 @@ def _(mo, stat_list, unit_dropdown):
 
 
 @app.cell
-def _():
-    # import altair with an abbreviated alias
-    import altair as alt
+def _(incidents_dataframe):
+    incidents_dataframe
+    return
 
-    # load a sample dataset as a pandas DataFrame
-    from altair.datasets import data
-    cars = data.cars()
 
-    # make the chart
-    alt.Chart(cars).mark_point().encode(
-        x='Horsepower',
-        y='Miles_per_Gallon',
-        color='Origin',
-    ).interactive()
+@app.cell
+def _(unit_dispatches_dataframe):
+    unit_dispatches_dataframe["incident_number"].value_counts()["F260019911"]
+    return
+
+
+@app.cell
+def _(alt, incidents_dataframe, unit_dispatches_dataframe):
+    # Graph 1
+    data_list = []
+    incident_to_unit_counts_dict = unit_dispatches_dataframe["incident_number"].value_counts()
+
+    for _, row in incidents_dataframe.iterrows():
+        unit_count = incident_to_unit_counts_dict.get(row["incident_number"])
+        data_dict = {
+            "datetime": row["datetime"],
+            "incident_number": row["incident_number"],
+            "type": row["type"],
+            "address": row["address"],
+            "number_of_units_responding": 0 if not unit_count else unit_count
+        }
+        data_list.append(data_dict)
+        break
+
+    data = alt.Data(values=data_list) # Should be list of dicts
+    # One mark per incident
+    data_list
+    # Incident date on X axis
+    # Number of responders on Y axis
+    # Color by type of lead unit? type of incident?
+    # Click on mark selects lead unit in dropdown?
+    # Hover over incident shows additional incident data...
+
+
+    # alt.Chart(cars).mark_point().encode(
+    #     x='Horsepower',
+    #     y='Miles_per_Gallon',
+    #     color='Origin',
+    # ).interactive()
     return
 
 
