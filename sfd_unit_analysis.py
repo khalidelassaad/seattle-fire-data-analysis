@@ -163,11 +163,27 @@ def _(minutes_to_minute_string, mo, selected_unit_dataframe, unit):
 def _(mo, stat_list, unit_dropdown):
     mo.vstack(
         [
-            mo.md(f"Choose a unit: {unit_dropdown}"),
-            mo.hstack(stat_list[:3], justify="center"),
-            mo.hstack(stat_list[3:6], justify="center"),
-            mo.hstack(stat_list[6:], justify="center"),
+            mo.md(f"### Select a Unit: {unit_dropdown}"),
+                mo.vstack([
+                    mo.hstack(stat_list[:3], justify="center"),
+                    mo.hstack(stat_list[3:6], justify="center"),
+                    mo.hstack(stat_list[6:], justify="center"),
+                ])
         ]
+    )
+    return
+
+
+@app.cell
+def _(mo):
+    mo.accordion(
+        {
+            "Data Definitions": mo.md(
+                '"Time in Transit" is defined as the difference between a unit\'s dispatch time and arrival time.<br>' + \
+                '"Time on Site" is defined as the difference between a unit\'s arrival time and in-service time.<br>' + \
+                '"Time Assigned" is defined as the difference between a unit\'s dispatch time and in-service time.'
+            ),
+        }
     )
     return
 
@@ -196,6 +212,22 @@ async def _(read_json_into_list):
 
 
 @app.cell
+def _(mo):
+    mo.md("""
+    ## Incidents by Unit Count over Time
+    """)
+    return
+
+
+@app.cell
+def _(mo, unit_dropdown):
+    mo.md(f"""
+    ### Highlighted Unit: {unit_dropdown}
+    """)
+    return
+
+
+@app.cell
 def _(alt, graph_1_data_list, unit):
     # Graph 1 Visualization
     data = alt.Data(values=graph_1_data_list)
@@ -208,7 +240,7 @@ def _(alt, graph_1_data_list, unit):
 
     chart = alt.Chart(data).mark_point().encode(
         x='Time:T',
-        y=alt.Y('Unit Count:Q', scale=alt.Scale(type='log', domain=[1,30])),
+        y=alt.Y('Unit Count:Q', scale=alt.Scale(type='log', domain=[0.9,30])),
         color=alt.condition(
             alt.expr.indexof(alt.datum["Unit Tuple"], unit) >= 0,
             alt.value('red'),
@@ -228,6 +260,31 @@ def _(alt, graph_1_data_list, unit):
     ).interactive()
 
     chart
+    return
+
+
+@app.cell
+def _(mo, unit):
+    mo.accordion(
+        {
+            "Graph Instructions": mo.md(
+                f'Select a unit to highlight from the dropdown above.<br>' + \
+                f'Incidents involving the selected unit, {unit}, are colored red.<br>' + \
+                f'Incidents led by {unit} are marked as squares.<br><br>' + \
+                'Scroll in and out to zoom the graph below.<br>' + \
+                'Click and Drag to pan the graph below.<br>' + \
+                'Hover your mouse over any mark to see additional data about that incident.'
+            )
+        }
+    )
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md("""
+    *Data Sources:<br>Incident Data: https://data.seattle.gov/Public-Safety/Seattle-Real-Time-Fire-911-Calls/kzjm-xkqj/about_data<br>Unit Dispatch Data: https://web.seattle.gov/sfd/IncidentSearch/*
+    """)
     return
 
 
