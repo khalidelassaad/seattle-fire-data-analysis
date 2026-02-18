@@ -1,0 +1,66 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.19.11"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "6815329caf0ce2e5a86757a19307d4dd",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "HCKf",
+      "code_hash": "61b8c19fe7a4808c1183968017126902",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "GiIT",
+      "code_hash": "e04de4f2911919f124b83b8bd93b22d7",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "QUxY",
+      "code_hash": "e5eb7d6b2e935661d9d205d297404e06",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Ixdm",
+      "code_hash": null,
+      "outputs": [],
+      "console": []
+    }
+  ]
+}
