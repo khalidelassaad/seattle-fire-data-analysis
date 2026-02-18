@@ -31,7 +31,7 @@ def _(incidents_dataframe, unit_dispatches_dataframe):
 
     for _, row in incidents_dataframe.iterrows():
         unit_dispatches_dataframe_filtered_to_incident = unit_dispatches_dataframe[unit_dispatches_dataframe["incident_number"] == row["incident_number"]]
-        unit_tuple = tuple(sorted(unit_dispatches_dataframe_filtered_to_incident["unit"]))
+        unit_tuple = tuple(sorted(set(unit_dispatches_dataframe_filtered_to_incident["unit"])))
         if not len(unit_tuple):
             continue
         units = unit_dispatches_dataframe_filtered_to_incident[["unit", "is_in_charge"]]

@@ -18,7 +18,7 @@
       "console": []
     },
     {
-      "id": "HCKf",
+      "id": "MJUe",
       "code_hash": "61b8c19fe7a4808c1183968017126902",
       "outputs": [
         {
@@ -31,8 +31,8 @@
       "console": []
     },
     {
-      "id": "GiIT",
-      "code_hash": "e04de4f2911919f124b83b8bd93b22d7",
+      "id": "vblA",
+      "code_hash": "8e6aff32cd91c3fd33b4a271cb2e5586",
       "outputs": [
         {
           "type": "data",
@@ -44,7 +44,7 @@
       "console": []
     },
     {
-      "id": "QUxY",
+      "id": "bkHC",
       "code_hash": "e5eb7d6b2e935661d9d205d297404e06",
       "outputs": [
         {
@@ -57,9 +57,16 @@
       "console": []
     },
     {
-      "id": "Ixdm",
+      "id": "lEQa",
       "code_hash": null,
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     }
   ]
