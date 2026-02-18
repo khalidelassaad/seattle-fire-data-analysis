@@ -172,6 +172,24 @@ def _(mo, stat_list, unit_dropdown):
 
 @app.cell
 def _():
+    # import altair with an abbreviated alias
+    import altair as alt
+
+    # load a sample dataset as a pandas DataFrame
+    from altair.datasets import data
+    cars = data.cars()
+
+    # make the chart
+    alt.Chart(cars).mark_point().encode(
+        x='Horsepower',
+        y='Miles_per_Gallon',
+        color='Origin',
+    ).interactive()
+    return
+
+
+@app.cell
+def _():
     return
 
 
