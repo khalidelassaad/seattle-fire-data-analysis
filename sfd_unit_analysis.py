@@ -11,8 +11,9 @@ def _():
     import altair as alt
     import marimo as mo
     import pandas as pd
+    import json
 
-    return alt, datetime, mo, pd
+    return alt, datetime, json, mo, pd
 
 
 @app.cell
@@ -38,7 +39,7 @@ async def _(read_csv_into_dataframe):
     incidents_dataframe = await read_csv_into_dataframe("incidents_last_30_days.csv")
     unit_dispatches_dataframe = await read_csv_into_dataframe("unit_dispatches_last_30_days.csv")
     unit_dataframe = await read_csv_into_dataframe("unit_stats_last_30_days.csv")
-    return incidents_dataframe, unit_dataframe, unit_dispatches_dataframe
+    return incidents_dataframe, unit_dataframe
 
 
 @app.cell
@@ -172,36 +173,32 @@ def _(mo, stat_list, unit_dropdown):
 
 
 @app.cell
-def _(incidents_dataframe, unit_dispatches_dataframe):
-    # Graph 1 Data
-    data_list = []
+def _(json, mo):
+    async def read_json_into_list(filename):
+        filepath = mo.notebook_location() / "public" / filename
+        if "http" not in str(mo.notebook_location()):
+            with open(filepath, 'r') as f:
+                data = json.load(f)
+                return data
+        from pyodide.http import pyfetch
+        from io import StringIO
+        response = await pyfetch(filepath)
+        data = await response.text()
+        return json.loads(data)
 
-    for _, row in incidents_dataframe.iterrows():
-        unit_dispatches_dataframe_filtered_to_incident = unit_dispatches_dataframe[unit_dispatches_dataframe["incident_number"] == row["incident_number"]]
-        unit_set = set(unit_dispatches_dataframe_filtered_to_incident["unit"])
-        if not len(unit_set):
-            continue
-        units = unit_dispatches_dataframe_filtered_to_incident[["unit", "is_in_charge"]]
-        units_in_charge_list = list(units[units["is_in_charge"]==True]["unit"])
-        unit_in_charge = units_in_charge_list[0] if len(units_in_charge_list) else None
-        data_dict = {
-            "Time": row["datetime"],
-            "Incident Number": row["incident_number"],
-            "Incident Type": row["type"],
-            "Address": row["address"],
-            "Unit Count": len(unit_set),
-            "Lead Unit": unit_in_charge,
-            "Dispatched Units": ", ".join(sorted(unit_set)),
-            "Unit Set": unit_set
-        }
-        data_list.append(data_dict)
-    return (data_list,)
+    return (read_json_into_list,)
 
 
 @app.cell
-def _(alt, data_list, unit):
+async def _(read_json_into_list):
+    graph_1_data_list = await read_json_into_list("graph_1_data.json")
+    return (graph_1_data_list,)
+
+
+@app.cell
+def _(alt, graph_1_data_list, unit):
     # Graph 1 Visualization
-    data = alt.Data(values=data_list)
+    data = alt.Data(values=graph_1_data_list)
     # One mark per incident
     # Incident date on X axis
     # Number of responders on Y axis
@@ -213,7 +210,7 @@ def _(alt, data_list, unit):
         x='Time:T',
         y=alt.Y('Unit Count:Q', scale=alt.Scale(type='log', domain=[1,30])),
         color=alt.condition(
-            alt.expr.indexof(alt.datum["Unit Set"], unit) >= 0,
+            alt.expr.indexof(alt.datum["Unit Tuple"], unit) >= 0,
             alt.value('red'),
             alt.value('gray')
         ),
@@ -223,7 +220,7 @@ def _(alt, data_list, unit):
             alt.value('circle')
         ),
         size=alt.condition(
-            alt.expr.indexof(alt.datum["Unit Set"], unit) >= 0,
+            alt.expr.indexof(alt.datum["Unit Tuple"], unit) >= 0,
             alt.value(100),
             alt.value(20)
         ),
